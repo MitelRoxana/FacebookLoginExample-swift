@@ -42,6 +42,5 @@ class LoginViewController: UIViewController {
             self.viewModel.getFBUserData()
         }
     }
-    
 }
 
