@@ -13,7 +13,7 @@ import FirebaseAuth
 class LoginViewModel {
     let fbLoginManager = FBSDKLoginManager()
     let permisions = ["public_profile", "email"]
-    var onLoginFinished: ((_ user: User?, _ errorString: String?) -> ())?
+    var onLoginFinished: ((_ errorString: String?) -> ())?
     
     func facebookLoginWithFirebase(accessToken: FBSDKAccessToken) {
         // Get credentials
@@ -23,10 +23,39 @@ class LoginViewModel {
         // Perform login by calling Firebase APIs
         Auth.auth().signIn(with: credential, completion: { (user, error) in
             if let error = error {
-                self.onLoginFinished?(nil, error.localizedDescription)
+                self.onLoginFinished?(error.localizedDescription)
                 return
             }
-            self.onLoginFinished?(user, nil)
+            self.onLoginFinished?(nil)
         })
+    }
+    
+    func getFBUserData(){
+        guard let token = FBSDKAccessToken.current() else {
+            self.onLoginFinished?("Failed login with facebook!")
+            return
+        }
+        
+        // Getting user data from facebook account
+        FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email"])
+            .start(completionHandler: { [weak self] (connection, result, error) -> Void in
+                guard let `self` = self else { return }
+                guard error == nil else {
+                    self.onLoginFinished?(error?.localizedDescription)
+                    return
+                }
+                
+                guard let userDetails = result as? [String:Any], let email = userDetails["email"] as? String else {
+                        self.onLoginFinished?("Failed extracting facebook data!")
+                        return
+                }
+                
+                //Saving the current session
+                var customer = Customer()
+                customer.email = email
+                CurrentSession.customer = customer
+                
+                self.facebookLoginWithFirebase(accessToken: token)
+            })
     }
 }

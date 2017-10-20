@@ -16,13 +16,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.onLoginFinished = { (user, response) in
-            
+        viewModel.onLoginFinished = { error in
+            if let error = error {
+                self.presentAlertWithTitle(title: "Warning", message: error)
+                return
+            }
+            if let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: Identifiers.Main.homeViewController) as? HomeViewController {
+                self.present(viewController, animated: true, completion: nil)
+            }
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     @IBAction func facebookLogin(_ sender: Any) {
@@ -37,12 +39,7 @@ class LoginViewController: UIViewController {
                 self.presentAlertWithTitle(title: "Warning", message: "Login was cancelled by the user!")
             }
             
-            guard let accessToken = FBSDKAccessToken.current() else {
-                print("Failed to get access token")
-                return
-            }
-            
-            self.viewModel.facebookLoginWithFirebase(accessToken: accessToken)
+            self.viewModel.getFBUserData()
         }
     }
     
