@@ -35,7 +35,6 @@
 		A0F3D0BD1F9A0FA7008BD80B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A0F3D0C51F9A1441008BD80B /* Customer + CurrentSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Customer + CurrentSession.swift"; sourceTree = "<group>"; };
 		A0F3D0C81F9A148E008BD80B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A0F3D0CA1F9A1CA3008BD80B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9A46CEB7CE1C5769A63ADA4 /* Pods-FacebookLoginExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookLoginExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookLoginExample/Pods-FacebookLoginExample.release.xcconfig"; sourceTree = "<group>"; };
 		C641D7051B5868174CD45778 /* Pods_FacebookLoginExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookLoginExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,7 +63,6 @@
 		A0CACE581F9A059D00C3650E = {
 			isa = PBXGroup;
 			children = (
-				A0F3D0CA1F9A1CA3008BD80B /* GoogleService-Info.plist */,
 				A0CACE631F9A059D00C3650E /* FacebookLoginExample */,
 				A0CACE621F9A059D00C3650E /* Products */,
 				78F6CC4F8983F908262610EB /* Pods */,
