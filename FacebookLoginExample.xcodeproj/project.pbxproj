@@ -14,6 +14,7 @@
 		A0CACE6F1F9A059D00C3650E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CACE6D1F9A059D00C3650E /* LaunchScreen.storyboard */; };
 		A0F3D0B71F9A0774008BD80B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F3D0B61F9A0774008BD80B /* HomeViewController.swift */; };
 		A0F3D0BA1F9A085B008BD80B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F3D0B91F9A085B008BD80B /* Extensions.swift */; };
+		A0F3D0BE1F9A0FA7008BD80B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F3D0BD1F9A0FA7008BD80B /* LoginViewModel.swift */; };
 		DD957E5CA6DF06481B0BF210 /* Pods_FacebookLoginExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C641D7051B5868174CD45778 /* Pods_FacebookLoginExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		A0F3D0B61F9A0774008BD80B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A0F3D0B91F9A085B008BD80B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A0F3D0BC1F9A0BE7008BD80B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F3D0BD1F9A0FA7008BD80B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B9A46CEB7CE1C5769A63ADA4 /* Pods-FacebookLoginExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookLoginExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacebookLoginExample/Pods-FacebookLoginExample.release.xcconfig"; sourceTree = "<group>"; };
 		C641D7051B5868174CD45778 /* Pods_FacebookLoginExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookLoginExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,8 +77,9 @@
 		A0CACE631F9A059D00C3650E /* FacebookLoginExample */ = {
 			isa = PBXGroup;
 			children = (
-				A0F3D0B81F9A0849008BD80B /* Extension */,
 				A0CACE641F9A059D00C3650E /* AppDelegate.swift */,
+				A0F3D0B81F9A0849008BD80B /* Extension */,
+				A0F3D0BF1F9A1073008BD80B /* View Models */,
 				A0CACE761F9A05D000C3650E /* ViewControllers */,
 				A0CACE771F9A05ED00C3650E /* Resources */,
 				A0CACE701F9A059D00C3650E /* Info.plist */,
@@ -109,6 +112,14 @@
 				A0F3D0B91F9A085B008BD80B /* Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A0F3D0BF1F9A1073008BD80B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0F3D0BD1F9A0FA7008BD80B /* LoginViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		D501AB143308F218533F459F /* Frameworks */ = {
@@ -266,6 +277,7 @@
 				A0CACE671F9A059D00C3650E /* LoginViewController.swift in Sources */,
 				A0CACE651F9A059D00C3650E /* AppDelegate.swift in Sources */,
 				A0F3D0B71F9A0774008BD80B /* HomeViewController.swift in Sources */,
+				A0F3D0BE1F9A0FA7008BD80B /* LoginViewModel.swift in Sources */,
 				A0F3D0BA1F9A085B008BD80B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
