@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mvu-Zc-NGb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,6 +17,21 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="BOQ-5f-74c">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="mvu-Zc-NGb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MUA-nd-RsF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zwS-L0-dp5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKQ-d5-joQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255" y="143"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -106,8 +121,55 @@
             </objects>
             <point key="canvasLocation" x="-394" y="143"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Hjz-od-Dg5">
+            <objects>
+                <viewController id="04u-7m-P6O" customClass="HomeViewController" customModule="FacebookLoginExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cb9-1J-iug">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-background" translatesAutoresizingMaskIntoConstraints="NO" id="F5V-tV-yfA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIJ-Sx-d4F">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-ff-3R3">
+                                        <rect key="frame" x="21" y="61.5" width="107.5" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="HHs-XP-bZa"/>
+                                    <constraint firstItem="I0A-ff-3R3" firstAttribute="centerY" secondItem="vIJ-Sx-d4F" secondAttribute="centerY" id="mN0-P5-qW0"/>
+                                    <constraint firstItem="I0A-ff-3R3" firstAttribute="centerX" secondItem="vIJ-Sx-d4F" secondAttribute="centerX" id="t2w-G4-N5f"/>
+                                    <constraint firstAttribute="height" constant="150" id="xA3-Bw-nAK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vIJ-Sx-d4F" firstAttribute="centerX" secondItem="Cb9-1J-iug" secondAttribute="centerX" id="96r-Sj-P87"/>
+                            <constraint firstItem="vIJ-Sx-d4F" firstAttribute="centerY" secondItem="Cb9-1J-iug" secondAttribute="centerY" id="IcC-Xb-QsG"/>
+                            <constraint firstItem="F5V-tV-yfA" firstAttribute="top" secondItem="Cb9-1J-iug" secondAttribute="top" id="VrU-mY-f7y"/>
+                            <constraint firstItem="6xn-jh-sva" firstAttribute="bottom" secondItem="F5V-tV-yfA" secondAttribute="bottom" id="Ywd-pl-Osx"/>
+                            <constraint firstItem="F5V-tV-yfA" firstAttribute="leading" secondItem="6xn-jh-sva" secondAttribute="leading" id="uZu-eR-GTP"/>
+                            <constraint firstItem="6xn-jh-sva" firstAttribute="trailing" secondItem="F5V-tV-yfA" secondAttribute="trailing" id="whS-dl-Zgy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6xn-jh-sva"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuJ-qd-pbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="137"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="home-background" width="1600" height="2560"/>
         <image name="login-background" width="1000" height="750"/>
     </resources>
 </document>
