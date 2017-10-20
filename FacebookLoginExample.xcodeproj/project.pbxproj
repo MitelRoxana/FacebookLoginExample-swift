@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A0CACE651F9A059D00C3650E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CACE641F9A059D00C3650E /* AppDelegate.swift */; };
-		A0CACE671F9A059D00C3650E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CACE661F9A059D00C3650E /* ViewController.swift */; };
+		A0CACE671F9A059D00C3650E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CACE661F9A059D00C3650E /* LoginViewController.swift */; };
 		A0CACE6A1F9A059D00C3650E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CACE681F9A059D00C3650E /* Main.storyboard */; };
 		A0CACE6C1F9A059D00C3650E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CACE6B1F9A059D00C3650E /* Assets.xcassets */; };
 		A0CACE6F1F9A059D00C3650E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CACE6D1F9A059D00C3650E /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		A0CACE611F9A059D00C3650E /* FacebookLoginExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookLoginExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CACE641F9A059D00C3650E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0CACE661F9A059D00C3650E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0CACE661F9A059D00C3650E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A0CACE691F9A059D00C3650E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0CACE6B1F9A059D00C3650E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0CACE6E1F9A059D00C3650E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,13 +55,29 @@
 			isa = PBXGroup;
 			children = (
 				A0CACE641F9A059D00C3650E /* AppDelegate.swift */,
-				A0CACE661F9A059D00C3650E /* ViewController.swift */,
-				A0CACE681F9A059D00C3650E /* Main.storyboard */,
-				A0CACE6B1F9A059D00C3650E /* Assets.xcassets */,
-				A0CACE6D1F9A059D00C3650E /* LaunchScreen.storyboard */,
+				A0CACE761F9A05D000C3650E /* ViewControllers */,
+				A0CACE771F9A05ED00C3650E /* Resources */,
 				A0CACE701F9A059D00C3650E /* Info.plist */,
 			);
 			path = FacebookLoginExample;
+			sourceTree = "<group>";
+		};
+		A0CACE761F9A05D000C3650E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0CACE661F9A059D00C3650E /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A0CACE771F9A05ED00C3650E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0CACE6B1F9A059D00C3650E /* Assets.xcassets */,
+				A0CACE6D1F9A059D00C3650E /* LaunchScreen.storyboard */,
+				A0CACE681F9A059D00C3650E /* Main.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0CACE671F9A059D00C3650E /* ViewController.swift in Sources */,
+				A0CACE671F9A059D00C3650E /* LoginViewController.swift in Sources */,
 				A0CACE651F9A059D00C3650E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

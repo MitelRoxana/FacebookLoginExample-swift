@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="Optima.ttc">
+            <string>Optima-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="FacebookLoginExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-background" translatesAutoresizingMaskIntoConstraints="NO" id="a7V-hy-LB5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kp5-aP-bbh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qse-gL-pHy">
+                                        <rect key="frame" x="10" y="100" width="355" height="40.5"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Qse-gL-pHy" secondAttribute="trailing" constant="10" id="akP-ut-HRw"/>
+                                    <constraint firstItem="Qse-gL-pHy" firstAttribute="leading" secondItem="kp5-aP-bbh" secondAttribute="leading" constant="10" id="nMu-2P-Etz"/>
+                                    <constraint firstItem="Qse-gL-pHy" firstAttribute="top" secondItem="kp5-aP-bbh" secondAttribute="top" constant="100" id="oiv-k2-Fig"/>
+                                    <constraint firstItem="Qse-gL-pHy" firstAttribute="centerX" secondItem="kp5-aP-bbh" secondAttribute="centerX" id="tsJ-yc-tGO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPm-13-ifG">
+                                <rect key="frame" x="40" y="357" width="295" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-K8-UUZ">
+                                        <rect key="frame" x="10" y="10.5" width="275" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hRK-K8-UUZ" firstAttribute="centerY" secondItem="PPm-13-ifG" secondAttribute="centerY" id="Tgb-2S-xeR"/>
+                                    <constraint firstAttribute="trailing" secondItem="hRK-K8-UUZ" secondAttribute="trailing" constant="10" id="deU-Bd-xse"/>
+                                    <constraint firstItem="hRK-K8-UUZ" firstAttribute="centerX" secondItem="PPm-13-ifG" secondAttribute="centerX" id="eND-71-Fng"/>
+                                    <constraint firstAttribute="height" constant="40" id="nKk-Fv-jGQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-I5-sDn">
+                                <rect key="frame" x="40" y="357" width="295" height="40"/>
+                                <connections>
+                                    <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="znd-2s-smF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Its a beautiful thing when a career and a passion come toghether" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-0A-oNF">
+                                <rect key="frame" x="40" y="417" width="295" height="38"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UBp-0A-oNF" firstAttribute="top" secondItem="OGe-I5-sDn" secondAttribute="bottom" constant="20" id="17z-di-qvp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a7V-hy-LB5" secondAttribute="trailing" id="5BG-N3-axt"/>
+                            <constraint firstItem="OGe-I5-sDn" firstAttribute="leading" secondItem="PPm-13-ifG" secondAttribute="leading" id="A8M-M4-PrT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kp5-aP-bbh" secondAttribute="trailing" id="ACo-Le-O5o"/>
+                            <constraint firstItem="PPm-13-ifG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Knb-xg-B74"/>
+                            <constraint firstItem="UBp-0A-oNF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="M0d-Sj-AET"/>
+                            <constraint firstItem="kp5-aP-bbh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M1M-wj-Vqw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UBp-0A-oNF" secondAttribute="trailing" constant="40" id="bWk-vg-aWA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a7V-hy-LB5" secondAttribute="bottom" id="fKc-SM-p7p"/>
+                            <constraint firstItem="a7V-hy-LB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fOO-t8-Dxr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PPm-13-ifG" secondAttribute="trailing" constant="40" id="fri-LB-Bvk"/>
+                            <constraint firstItem="a7V-hy-LB5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nBC-zM-1hi"/>
+                            <constraint firstItem="OGe-I5-sDn" firstAttribute="width" secondItem="PPm-13-ifG" secondAttribute="width" id="oPg-yS-J7n"/>
+                            <constraint firstItem="OGe-I5-sDn" firstAttribute="top" secondItem="PPm-13-ifG" secondAttribute="top" id="tqc-Q1-vaE"/>
+                            <constraint firstItem="OGe-I5-sDn" firstAttribute="height" secondItem="PPm-13-ifG" secondAttribute="height" id="tsI-6k-LGo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kp5-aP-bbh" secondAttribute="bottom" id="ybb-vL-4RB"/>
+                            <constraint firstItem="kp5-aP-bbh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yfq-Py-Po3"/>
+                            <constraint firstItem="kp5-aP-bbh" firstAttribute="top" secondItem="PPm-13-ifG" secondAttribute="bottom" constant="-397" id="zRO-xY-mJt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iTU-em-9pZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login-background" width="1000" height="750"/>
+    </resources>
+</document>
