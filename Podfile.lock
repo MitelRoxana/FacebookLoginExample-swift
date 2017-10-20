@@ -1,0 +1,34 @@
+PODS:
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FacebookCore (0.2.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.15)
+  - FacebookLogin (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKLoginKit (~> 4.15)
+  - FBSDKCoreKit (4.27.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.27.0):
+    - FBSDKCoreKit
+
+DEPENDENCIES:
+  - FacebookCore
+  - FacebookLogin
+
+SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
+  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
+  FBSDKCoreKit: ebc6c5f5b3f0e72396041050e2266781a38ac587
+  FBSDKLoginKit: 887be4b7452e1c5a3cc4485ce152529965a0c41e
+
+PODFILE CHECKSUM: d4e2a149320e9320f6cc9176e158f3a4599dc05e
+
+COCOAPODS: 1.3.1

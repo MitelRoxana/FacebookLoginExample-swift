@@ -67,3 +67,7 @@ extension UIView {
         layer.shadowRadius = shadowRadius
     }
 }
+
+extension UIStoryboard {
+    @nonobjc static let main = UIStoryboard(name: "Main", bundle: nil)
+}
